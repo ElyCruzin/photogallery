@@ -141,21 +141,20 @@ html {
 }
 body {
     background-color: #ffffff;
-    max-width: 400px;
-    min-width: 370px;
+    width: 485px;
     margin: 0 auto;
     line-height: 1.5;
 }
 header {
     color: #007d7b;
-    padding: 10px 0;
+    
 }
 nav {
     background-color: #000000;
 }
 
 ul {
-    height: 100px;
+    height: 95px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,8 +168,8 @@ h1, h2, li {
     text-align: center;
 }
 h1 {
-    height: 50px;
-    font-size: 2.4em;
+    font-size: 3em;
+    padding: 5px 0;
 }
 h2 {
     font-size: 2em;
@@ -189,7 +188,7 @@ a {
 a:hover {
     color: #007d7b;
 }
-figcaption, label, input, small {
+figcaption, label, input  {
     font-size: 1em;
 }
 p {
@@ -208,15 +207,15 @@ li:last-child {
     border-radius: 5px;
 }
 figure {
+    width: 485px;
     display: table;
-    margin: 0 20px;
 }
 
 img {
-    width: 100%;
+    width: 435px;
     height: auto;
     display: block;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
     padding: 0;
 }
 
@@ -243,11 +242,13 @@ figcaption {
 }
 
 #contact {
+    padding-top: 2px;
     background-color: #000000;
     color: #ffffff;
 
 }
 #contact p {
+    margin: 15px 10px;
     text-align: center;
 }
 fieldset {
@@ -262,11 +263,14 @@ input {
     color: #007d7b;
 }
 input::placeholder {
+    padding-left: 5px;
     color: #007d7b;
     font-weight: bold;
 }
 label {
-    margin-left: 55px;
+    text-align: left;
+    position: relative;
+    left: 75px;
 }
 input[type="submit"] {
     width: 230px;
@@ -280,7 +284,7 @@ input[type="submit"] {
 footer {
     background-color: #000000;
     color: #ffffff;
-    padding-top: 50px;
+    padding-top: 60px;
     text-align: center;
-    font-size: .75em;
+    font-size: 1em;
 }
