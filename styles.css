@@ -132,23 +132,26 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-/*** Global Styles ***/
+
+/*** Mobile Styles ***/
 html {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #000000;
-    
     box-sizing: border-box;
 }
+
 body {
     background-color: #ffffff;
-    width: 485px;
+    width: 465px;
     margin: 0 auto;
     line-height: 1.5;
 }
+
 header {
     color: #007d7b;
-    
+
 }
+
 nav {
     background-color: #000000;
 }
@@ -158,46 +161,62 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
-h1, h2, li, label, small {
+
+h1,
+h2,
+li,
+label,
+small {
     text-transform: uppercase;
 }
-h1, h2, li {
+
+h1,
+h2,
+li {
     font-weight: bold;
     text-align: center;
 }
+
 h1 {
     font-size: 3em;
     padding: 5px 0;
 }
+
 h2 {
     font-size: 2em;
     margin: 10px;
 }
+
 nav li {
-    flex-shrink: 2;
     padding: 10px;
     font-size: 1.5em;
-    
 }
+
 a {
     color: #ffffff;
     text-decoration: none;
 }
+
 a:hover {
     color: #007d7b;
 }
-figcaption, label, input  {
+
+figcaption,
+label,
+input {
     font-size: 1em;
 }
+
 p {
     font-size: 1.25em;
     margin: 10px;
 }
+
 nav h2 {
     display: none;
 }
+
 li:last-child {
     position: fixed;
     bottom: 0;
@@ -206,13 +225,15 @@ li:last-child {
     z-index: 2;
     border-radius: 5px;
 }
+
 figure {
-    width: 485px;
+    width: 90%;
     display: table;
+    margin: 0 auto;
 }
 
 img {
-    width: 435px;
+    width: 100%;
     height: auto;
     display: block;
     margin: 0 auto 20px auto;
@@ -230,9 +251,11 @@ figcaption {
     position: relative;
     bottom: 50px;
 }
+
 .white {
     color: #ffffff;
 }
+
 .top {
     height: 0;
     display: table-caption;
@@ -247,33 +270,39 @@ figcaption {
     color: #ffffff;
 
 }
-#contact p {
-    margin: 15px 10px;
+
+#contact > p {
+    padding: 0 5px 30px 5px;
     text-align: center;
 }
+
 fieldset {
     display: none;
 }
+
 input {
     display: block;
-    margin: 0 auto;  
-    width: 350px;
+    margin: 0 auto;
+    width: 80%;
     height: 30px;
     text-transform: uppercase;
     color: #007d7b;
 }
+
 input::placeholder {
     padding-left: 5px;
     color: #007d7b;
     font-weight: bold;
 }
+
 label {
     text-align: left;
     position: relative;
-    left: 75px;
+    left: 11%;
 }
+
 input[type="submit"] {
-    width: 230px;
+    width: 40%;
     height: 35px;
     background-color: #007d7b;
     color: #ffffff;
@@ -287,4 +316,78 @@ footer {
     padding-top: 60px;
     text-align: center;
     font-size: 1em;
+}
+
+/*** Medium ***/
+@media screen and (min-width: 880px) {
+    body {
+        width: 880px;
+    }
+
+    h1 {
+        justify-content: left;
+        margin-left: 10px;
+    }
+    li:last-child {
+        display: none;
+    }
+
+    div {
+        margin: 0 10px 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    }
+
+    figure:first-child {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    figure:nth-child(2) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    figure {
+        margin: 0;
+        width: 100%;
+    }
+    img {
+        margin: 0;
+    }
+    figcaption {
+        bottom: 35px;
+    }
+
+    label {
+        left: 10.5%;
+    }
+    .adjust {
+        bottom: 385px;
+    }
+}
+
+/*** Large ***/
+@media screen and (min-width: 1300px) {
+    body {
+        width: 1300px;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    ul {
+        justify-content: right;
+    }
+    li:last-child {
+        display: none;
+    }
+    div {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .adjust {
+        bottom: 35px;
+    }
 }
